@@ -1,0 +1,145 @@
+.toolbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+}
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100%; /* Ensure the container takes the full width of its parent */
+    display: flex;
+    justify-content: center; 
+}
+
+.marquee {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+    justify-content: center; 
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* To stop the animation after it completes */
+.marquee {
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white; /* Adjust color as needed */
+    font-size: 24px;
+    text-decoration: none;
+}
+.secondary{
+    height: 5vh;
+}
+.CCPlogo{
+    padding-left: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #36454F;
+    font-family: 'Concert One', cursive;
+    width:20%;
+    margin-left: 0; /* Remove margin on the left */
+    margin-right: 0; /* Remove margin on the right */
+
+}
+.logo {
+    width: 10%;
+    height: 15%; /* Adjust based on your logo size */
+    margin-right: none;
+    display: block; /* Ensures the image takes full width of the container */
+    margin: 0 ; /* Centers the image horizontally */
+}
+.logo-container {
+    /* text-align: center;  */
+    /* Aligns contents horizontally */
+    justify-content: flex-start; /* Aligns items to the start (left) */
+    top: 0;
+    left: 0;
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Remove any margin */
+}
+
+
+
+.spacer {
+    flex: 1;
+   
+}
+.toolbar{
+    background-color: grey;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.auth-buttons button {
+    margin-left: 8px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .is-collapsed {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+    }
+    .logo {
+        height: 40px; /* Adjust based on your logo size */
+        margin-right: 8px;
+      }
+    .auth-buttons button {
+        width: 100%;
+        margin: 8px 0;
+    }
+}

@@ -1,0 +1,119 @@
+<div class="main-banner">
+  <div class="logo-container">
+      <img src="../../assets/logo.jpg" alt="Logo" class="logo">
+      <span class="CCPlogo">CCP</span>
+  </div>
+  
+  <button style="font-weight: bold;" mat-icon-button class="navbar-toggler d-lg-none" type="button" aria-label="Toggle navigation">
+      <mat-icon>menu</mat-icon>
+  </button>
+
+  <nav class="nav-links">
+      <a mat-button style="font-weight: bold;" class="navbar-brand" href="#">Home</a>
+      <a mat-button style="font-weight: bold;" class="nav-link" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">About</a>
+      <button mat-button style="font-weight: bold;" [matMenuTriggerFor]="servicesMenu" aria-label="Services Menu">
+          Explore Services <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #servicesMenu="matMenu">
+          <button mat-menu-item routerLink="drug-therapy">Substance Abuse Support</button>
+          <button mat-menu-item routerLink="marriage-and-relationships">Marriage & relationship guidance</button>
+          <button mat-menu-item routerLink="financial-wellness">Recreational Therapy</button>
+          <button mat-menu-item routerLink="stress-management">Stress Management</button>
+          <button mat-menu-item routerLink="emotional-wellbeing">Emotional Wellbeing support</button>
+      </mat-menu>
+      <a mat-button style="font-weight: bold;" class="nav-link" routerLink="target groups" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Find a Counsellor</a>
+      <a mat-button style="font-weight: bold;" class="nav-link" href="/contactus" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Contact Us</a>
+  </nav>
+  
+  <div class="auth-buttons">
+      <button mat-raised-button color="primary" routerLink="/signup" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">SignUp</button>
+      <button mat-raised-button color="accent" routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Login</button>
+  </div>
+</div>
+<div class="container">
+  <div class="focus">
+    <h1>Our focus is demystifying the world of counselling</h1>
+    <img src="../../assets/motivation.jpg" alt="" style="max-width: 100%; height: auto;">
+</div>
+
+<div class="goal">
+<h2>Bridging the gap between psychotherapist and youth in need</h2>
+<p>Feesabilillah at it's core aims to unravel the complexity of seeking counselling services by providing a platform that links the user with counsellors both professionals and peer counselors. We aim to provide all rounded healing through peer counselling ,accountability groups and nurturing team spirit</p>
+</div>
+</div>
+<div class="container2">
+  <h1 style="font-size: 3em;" >We bring together</h1>
+  <div class="image-row">
+    <div>
+      <img src="../../assets/mind.jpg" alt="Mind">
+      <label for="">Mind</label>
+    </div>
+    <div>
+      <img src="../../assets/body.jpg" alt="Body">
+      <label for="">Body</label>
+    </div>
+    <div>
+      <img src="../../assets/soul.jpg" alt="Spiritual Health">
+      <label for="">Spiritual Health</label>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container3">
+  <h1>What we offer</h1>
+  <div class="groups">
+      <div class="group-item">
+          <h2 >Counselling Sessions</h2>
+          <p>Experience personalized individual counseling sessions with skilled peer & professional counselors, tailored to meet your specific needs.  
+            </p>
+          <button class="button">BOOK NOW</button>
+      </div>
+      <div class="group-item">
+          <h2>Mental Health talks </h2>
+          <p>Participate in empowering mental health talks focused on educating and equipping individuals with strategies for enhanced mental wellness and resilience.
+            </p>
+          <button class="button">JOIN NOW</button>
+      </div>
+      <div class="group-item">
+          <h2>Recreational Therapy</h2>
+          <p>Experience the transformative power of recreational therapy. Our sessions combine therapeutic activities with expert guidance to enhance your overall well-being. </p>
+          <button class="button">JOIN NOW</button>
+      </div>
+      <div class="group-item">
+          <h2>Immediate Care Network</h2>
+          <p>Accessible support network providing effective tools and resources for managing stress and mental health concerns promptly and effectively.</p>
+          <button class="button">INQUIRE</button>
+      </div>
+  </div>
+</div>
+
+<!-- <div class="main-banner">
+    <div class="banner-content ">
+      <h1 style="align-self: top;">Counseling For Your Better Life</h1>
+    
+    </div>
+  </div> -->
+  
+      <!-- <div class="banner-buttons">
+        <button style="margin-top: 90%; margin-right: 85%;align-items: end;" mat-raised-button color="primary">Talk to Us</button>
+      </div>
+      <div class="banner-button2">
+        <button style="margin-top: 90%; margin-right: 85%;align-items: end;" mat-raised-button color="primary">Chat with us</button>
+      </div> -->
+<!-- 
+  <div class="info-section">
+    <div class="info-card">
+      <h2>100% Confidential</h2>
+      <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+    </div>
+    <div class="info-card">
+      <h2>Qualified Team</h2>
+      <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+    </div>
+    <div class="info-card">
+      <h2>Individual Approach</h2>
+      <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+    </div>
+  </div> -->

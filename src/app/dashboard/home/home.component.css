@@ -1,0 +1,235 @@
+.main-banner {
+    position: relative;
+    background-image: url('/assets/therapy-session.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+}
+
+.CCPlogo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fc801b;
+    font-family: 'Concert One', cursive;
+}
+
+.nav-links {
+    position: absolute;
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.auth-buttons {
+    position: absolute;
+    top: 60px; /* Adjust to prevent overlap with nav-links */
+    right: 20px; /* Distance from the right */
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.auth-buttons button {
+    margin-left: 8px;
+}
+
+.navbar-toggler {
+    position: absolute;
+    top: 20px; /* Adjust to align with logo */
+    right: 20px; /* Adjust to align with right edge */
+}
+
+@media (max-width: 768px) {
+    .nav-links, .auth-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .auth-buttons button {
+        width: 100%;
+        margin: 8px 0;
+    }
+}
+.container {
+    display: flex;
+    background-color: rgb(241, 228, 235);
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top vertically */
+    max-width: 100%; /* Take full width of the parent container */
+    padding: 20px; /* Add padding as needed */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.focus {
+    flex: 1; /* Take up available space */
+    padding: 20px; /* Add padding to create space around the content */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.focus h1 {
+    margin-top: 0; /* Remove default margin */
+}
+
+.focus img {
+    width: 100%; /* Ensure the image fills its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure no extra space is left under the image */
+}
+.goal {
+    flex: 1; /* Take up available space */
+}
+
+.goal h2 {
+    color: #36454F; /* Adjust color as needed */
+}
+
+.goal p {
+    line-height: 1.6;
+    font-size: 18px; /* Adjust line height for better readability */
+}
+.container2 {
+    display: flex;
+    background-color: rgb(231, 220, 245);
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.image-row div {
+    position: relative; /* Parent container for absolute positioning */
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center; /* Center align text */
+}
+
+.image-row img {
+    width: 100%; /* Ensure images take full width of their containers */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+.image-row label {
+    position: absolute;
+    bottom: 10px; /* Position the label at the bottom */
+    left: 0; /* Center the label horizontally */
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 5px;
+    font-size: 1.2em; /* Increase font size */
+    text-align: center; /* Center align text */
+}
+
+.image-row div:first-child img,
+.image-row div:last-child img {
+    height: 200px; /* Set a specific height for Mind and Soul images */
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+}
+
+
+
+
+.container3 {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 249, 255);
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text horizontally */
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add padding as needed */
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top vertically */
+    max-width: 100%; /* Take full width of the parent container */
+    box-sizing: border-box; 
+    flex-direction: column;
+  
+}
+
+.groups {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-around; /* Center items with space around */
+    margin-top: 20px; /* Adjust spacing between h1 and groups */
+}
+
+.group-item {
+    text-align: center; /* Center text within each group item */
+    margin: 10px; /* Adjust margin between group items */
+    width: 23%; /* Set width to create four columns (adjust as needed) */
+    padding: 10px; /* Add padding to group items */
+    border: 1px solid #ccc; /* Example border for group items */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+ h1{
+    margin-bottom: 10px;
+    text-align: center; /* Add spacing between heading and paragraph */
+}
+
+.group-item p {
+    line-height: 1.6; /* Adjust line height for better readability */
+    margin-bottom: 15px; /* Add spacing between paragraphs */
+}
+
+.group-item button {
+    background-color: #007BFF; /* Example button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.group-item button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+@media (max-width: 768px) {
+    .group-item {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+
+
