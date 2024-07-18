@@ -20,6 +20,7 @@ import { ContactusComponent } from './dashboard/contactus/contactus.component';
 import { ServicesComponent } from './dashboard/services/services.component';
 import { SearchTextComponent } from './dashboard/search-text/search-text.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { DrugTherapyComponent } from './dashboard/drug-therapy/drug-therapy.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { MatMenuModule } from '@angular/material/menu';
     AboutComponent,
     ContactusComponent,
     ServicesComponent,
-    SearchTextComponent
+    SearchTextComponent,
+    DrugTherapyComponent
   ],
   imports: [
     BrowserModule,
