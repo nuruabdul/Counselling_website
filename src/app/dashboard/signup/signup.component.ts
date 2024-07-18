@@ -13,7 +13,9 @@ export class SignupComponent {
   constructor(private authService: AuthService, private router: Router) {}
   onFormSubmitted(form: NgForm) {
     if (!form.valid) {
+      alert('Please enter all the required fields')
       return;
+    
     }
     const email = form.value.email;
     const password = form.value.password;

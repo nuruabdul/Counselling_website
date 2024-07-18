@@ -9,7 +9,15 @@ import { AuthService } from 'src/app/Services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(private authService: AuthService, private router: Router) {}
+  isLoggedIn = false; // Flag to track login state
+  errorMessage: string | null = null; // Error message holder
+
+  constructor(private authService: AuthService, private router: Router) {
+    // Subscribe to authentication state changes
+    this.authService.userLoggedIn.subscribe(isLoggedIn => {
+      this.isLoggedIn = isLoggedIn;
+    });
+  }
 
   onFormSubmitted(form: NgForm) {
     if (!form.valid) {
@@ -21,17 +29,24 @@ export class LoginComponent {
     this.authService.login(email, password).subscribe(
       response => {
         console.log('Login successful', response);
+        // Redirect or update UI accordingly upon successful login
         this.router.navigate(['/home']);
       },
       error => {
         console.error('Login failed', error);
         if (error.error && error.error.error) {
-          console.error('Firebase error message:', error.error.error.message);
+          this.errorMessage = error.error.error.message;
         }
       }
     );
 
-    console.log(form.value);
     form.reset();
+  }
+
+  logout() {
+    this.authService.logout();
+    // Redirect or update UI accordingly upon logout
+    // Example: Redirect to login page
+    this.router.navigate(['/login']);
   }
 }

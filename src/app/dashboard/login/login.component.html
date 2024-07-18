@@ -8,13 +8,13 @@
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" ngModel required minlength="8">
     </div>
-    <button [disabled]="authForm.invalid" type="submit">Login</button>
+    <button [disabled]="authForm.invalid" type="submit">{{ isLoggedIn ? 'Logout' : 'Login' }}</button>
     <br><br>
     <label for="signup">
       Don't have an account? <a routerLink="/signup">Register here</a>
     </label>
+    <!-- <div *ngIf="isLoggedIn">
+      <button (click)="logout()">Logout</button>
+    </div> -->
   </form>
 </div>
-
-  
-  <!-- background-color: rgb(233, 193, 233); -->
