@@ -3,4 +3,64 @@
     font-weight: bold;
 } */
 
+
+
+
+  .nav-links a.mat-button {
+    color: black;
+  }
   
+  .nav-links a.mat-button:hover {
+    color: darkgray; /* Optional: Change color on hover */
+  }
+  
+.logo-container {
+    position: absolute;
+    left: 20px; /* Distance from the left */
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+}
+
+.CCPlogo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fc801b;
+    font-family: 'Concert One', cursive;
+}
+
+.nav-links {
+    position: absolute;
+    right: 20px; /* Distance from the right */
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    
+}
+
+
+
+.navbar-toggler {
+    position: absolute;
+    right: 20px; /* Adjust to align with right edge */
+}
+
+@media (max-width: 768px) {
+    .nav-links, .auth-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .auth-buttons button {
+        width: 100%;
+        margin: 8px 0;
+    }
+}
