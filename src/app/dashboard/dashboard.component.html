@@ -1,0 +1,41 @@
+
+<div class="wrapper" style="padding-bottom: 35px;">
+    <div class="navigation" style="color: black;font-size: 18px;position: fixed; z-index: 1000; box-sizing: border-box;background-color: white;">
+    <div class="logo-container"  >
+        <img src="../../assets/logo.jpg" alt="Logo" class="logo">
+        <span class="CCPlogo">CCP</span>
+    </div>
+    
+  
+    <nav  class="nav-links" style="color: black;font-size: 18px;position: fixed; z-index: 1000; box-sizing: border-box;background-color: white;">
+        <a mat-button style="font-weight: bold;" class="navbar-brand" href="#">Home</a>
+        <a mat-button style="font-weight: bold;" class="nav-link" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">About</a>
+        <a mat-button style="font-weight: bold;" class="nav-link"  [matMenuTriggerFor]="servicesMenu" aria-label="Services Menu">
+            Explore Services <mat-icon>arrow_drop_down</mat-icon>
+        </a>
+        <mat-menu #servicesMenu="matMenu" >
+          <button mat-menu-item routerLink="emotional-wellbeing">Depression & Anxiety</button>
+          <button mat-menu-item routerLink="stress-management">Stress Management</button>
+            <button mat-menu-item routerLink="/drug-therapy">Substance Abuse Support</button>
+            <button mat-menu-item routerLink="financial-wellness">Recreational Therapy</button>
+            <button mat-menu-item routerLink="marriage-and-relationships">Marriage & relationship guidance</button>
+           
+         
+          
+        </mat-menu>
+        <ng-container *ngIf="isLoggedIn; else loginPrompt">
+          <a mat-button style="font-weight: bold;" class="nav-link" routerLink="/coming-soon" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Find a Counsellor</a>
+        </ng-container>
+        <ng-template #loginPrompt>
+          <a mat-button style="font-weight: bold;" class="nav-link" (click)="onBookSession()">Find a Counsellor</a>
+        </ng-template>
+    
+        <a mat-button style="font-weight: bold;" class="nav-link" href="/contactus" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Contact Us</a>
+      </nav>
+    </div>
+        <!-- Menu Toggler Button -->
+        <button style="font-weight: bold;" mat-icon-button class="navbar-toggler d-lg-none" type="button" aria-label="Toggle navigation" (click)="toggleNav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+  </div>
+ 

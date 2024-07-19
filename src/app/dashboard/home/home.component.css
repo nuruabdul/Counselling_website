@@ -1,7 +1,11 @@
 .main-banner {
-    position: relative;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    z-index: 1000; /* Ensures the banner stays above other content */
+    background-color: white; /* Ensures background color is applied when it becomes sticky */
     background-image: url('/assets/therapy-session.jpg');
     background-size: cover;
+    top: 0;
     background-position: top center;
     background-repeat: no-repeat;
     color: white;
@@ -9,40 +13,8 @@
     width: 100%;
     height: 100vh;
 }
-
-.logo-container {
-    position: absolute;
-    top: 20px; /* Distance from the top */
-    left: 20px; /* Distance from the left */
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    width: 50px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px;
-}
-
-.CCPlogo {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fc801b;
-    font-family: 'Concert One', cursive;
-}
-
-.nav-links {
-    position: absolute;
-    top: 20px; /* Distance from the top */
-    right: 20px; /* Distance from the right */
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-}
-
 .auth-buttons {
     position: absolute;
-    top: 60px; /* Adjust to prevent overlap with nav-links */
     right: 20px; /* Distance from the right */
     display: flex;
     align-items: center;
@@ -51,27 +23,6 @@
 
 .auth-buttons button {
     margin-left: 8px;
-}
-
-.navbar-toggler {
-    position: absolute;
-    top: 20px; /* Adjust to align with logo */
-    right: 20px; /* Adjust to align with right edge */
-}
-
-@media (max-width: 768px) {
-    .nav-links, .auth-buttons {
-        flex-direction: column;
-        align-items: flex-start;
-        top: auto;
-        bottom: 20px;
-        right: 20px;
-    }
-
-    .auth-buttons button {
-        width: 100%;
-        margin: 8px 0;
-    }
 }
 .container {
     display: flex;
@@ -223,7 +174,9 @@
         width: 100%; /* Full width on smaller screens */
     }
 }
-
-
+.custom-snackbar {
+    background-color: green;
+    color: white;
+  }
 
 

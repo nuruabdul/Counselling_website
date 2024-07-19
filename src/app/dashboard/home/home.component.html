@@ -1,42 +1,15 @@
-<div class="main-banner">
-  <div class="logo-container">
-      <img src="../../assets/logo.jpg" alt="Logo" class="logo">
-      <span class="CCPlogo">CCP</span>
-  </div>
-  
-  <button style="font-weight: bold;" mat-icon-button class="navbar-toggler d-lg-none" type="button" aria-label="Toggle navigation">
-      <mat-icon>menu</mat-icon>
-  </button>
 
-  <nav class="nav-links">
-      <a mat-button style="font-weight: bold;" class="navbar-brand" href="#">Home</a>
-      <a mat-button style="font-weight: bold;" class="nav-link" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">About</a>
-      <button mat-button style="font-weight: bold;" [matMenuTriggerFor]="servicesMenu" aria-label="Services Menu">
-          Explore Services <mat-icon>arrow_drop_down</mat-icon>
-      </button>
-      <mat-menu #servicesMenu="matMenu">
-        <button mat-menu-item routerLink="emotional-wellbeing">Depression & Anxiety</button>
-        <button mat-menu-item routerLink="stress-management">Stress Management</button>
-          <button mat-menu-item routerLink="/drug-therapy">Substance Abuse Support</button>
-          <button mat-menu-item routerLink="financial-wellness">Recreational Therapy</button>
-          <button mat-menu-item routerLink="marriage-and-relationships">Marriage & relationship guidance</button>
-         
-       
-        
-      </mat-menu>
-      <a mat-button style="font-weight: bold;" class="nav-link" routerLink="target groups" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Find a Counsellor</a>
-      <a mat-button style="font-weight: bold;" class="nav-link" href="/contactus" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Contact Us</a>
-  </nav>
-  
-  <div class="auth-buttons">
-      <button mat-raised-button color="primary" *ngIf="!isLoggedIn"  routerLink="/signup" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">SignUp</button>
-      <button mat-raised-button color="accent" *ngIf="!isLoggedIn" routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Login</button>
-      <div *ngIf="isLoggedIn">
-        <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+<!-- <app-dashboard></app-dashboard> -->
+
+<div class="main-banner" >
+    <div class="auth-buttons">
+        <button mat-raised-button color="primary" *ngIf="!isLoggedIn"  routerLink="/signup" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">SignUp</button>
+        <button mat-raised-button color="secondary" *ngIf="!isLoggedIn" routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Login</button>
+        <div *ngIf="isLoggedIn">
+          <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+        </div>
       </div>
-    </div>
-</div>
-
+  </div> 
 <div class="container">
   <div class="focus">
       <h1 style="font-size: 2em;">Our focus is demystifying the world of counselling</h1>
